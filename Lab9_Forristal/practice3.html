@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice 3</title>
+    </head>
+    <body>
+        <a href="index.html">
+            <button>Return to main page</button>
+        </a>
+        <p style="font-size: x-large;">Practice 3</p>
+        <br>
+        Initial Password: 
+        <input id="init-password" type="text" placeholder="hamburgers">
+        <br><br>
+        Check Password: 
+        <input id="check-password" type="text" placeholder="hamburgers">
+        <br><br><br>
+        <button onclick="checkPassword()">Check password</button>
+    </body>
+</html>
+
+<style>
+
+    button {
+        outline-offset: 10px;
+        background-color: grey;
+        border: none;
+        border-radius: 2cm;
+        color: white;
+        text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 10px;
+        padding: 13px 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0 , 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    button:hover {
+        transition: all .4s ease;
+        -webkit-transition: all .4s ease;
+        outline-offset: 10px;
+        background-color: darkgrey;
+        border: none;
+        border-radius: 2cm;
+        color: white;
+        text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 10px;
+        padding: 13px 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0 , 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+<script>
+    function checkPassword() {
+        let init_password = document.getElementById("init-password").value;
+        let check_password = document.getElementById("check-password").value;
+
+        if ((init_password.length < 8) || (check_password.length < 8)) {
+            alert("The length of at least one password is not at least 8 characters.");
+        } else if (init_password != check_password) {
+            alert("The two passwords do not match.");
+        } else {
+            alert("The passwords match.");
+        }
+    }
+</script>
